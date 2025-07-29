@@ -1,0 +1,39 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-header">
+      <h4 class="mb-0">病毒檢測上傳</h4>
+    </div>
+    <div class="card-body">
+      <form action="{{ url_for('home_blueprint.virus_detect') }}" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="file">選擇檔案：</label>
+          <input type="file" class="form-control" id="file" name="file" accept=".exe,.doc,.pdf" required>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">開始檢測</button>
+      </form>
+    </div>
+  </div>
+
+  {% if filename %}
+  <div class="mt-4">
+    <p><strong>檔案名稱：</strong> {{ filename }}</p>
+    <p><strong>病毒名稱：</strong> {{ virus_name }}</p>
+    <p>
+      <strong>風險分數：</strong>
+      {% if risk_score == "無法掃描檔案" %}
+        <span class="badge badge-danger">掃描失敗</span>
+      {% elif risk_score > 80 %}
+        <span class="badge badge-danger">{{ risk_score }}%</span>
+      {% elif risk_score > 50 %}
+        <span class="badge badge-warning">{{ risk_score }}%</span>
+      {% else %}
+        <span class="badge badge-success">{{ risk_score }}%</span>
+      {% endif %}
+    </p>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

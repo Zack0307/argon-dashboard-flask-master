@@ -1,0 +1,15 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open virus_upload.html",
+            "file": "c:\\Users\\digital\\Downloads\\argon-dashboard-flask-master\\argon-dashboard-flask-master\\argon-dashboard-flask-master\\apps\\templates\\home\\virus_upload.html"
+        }
+    ]
+}
