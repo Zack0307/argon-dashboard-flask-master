@@ -45,27 +45,6 @@
 
 <br />
 
-## Docker Support
-
-> Get the code
-
-```bash
-$ git clone https://github.com/app-generator/argon-dashboard-flask.git
-$ cd argon-dashboard-flask
-```
-
-> Start the app in Docker
-
-```bash
-$ docker-compose pull   # download dependencies 
-$ docker-compose build  # local set up
-$ docker-compose up -d  # start the app 
-```
-
-Visit `http://localhost:85` in your browser. The app should be up & running.
-
-<br />
-
 ## Quick start
 
 > UNZIP the sources or clone the private repository. After getting the code, open a terminal and navigate to the working directory, with product source code.
@@ -126,6 +105,9 @@ Within the download you'll find the following directories and files:
    |    |
    |    |-- home/                          # A simple app that serve HTML files
    |    |    |-- routes.py                 # Define app routes
+   |    |    |-- markov.py
+   |    |    |-- markov_frequency.py
+   |    |    |-- markov_execute_file.py
    |    |
    |    |-- authentication/                # Handles auth routes (login and register)
    |    |    |-- routes.py                 # Define authentication routes  
@@ -188,108 +170,8 @@ Within the download you'll find the following directories and files:
 
 <br />
 
-## Recompile CSS
 
-To recompile SCSS files, follow this setup:
-
-<br />
-
-**Step #1** - Install tools
-
-- [NodeJS](https://nodejs.org/en/) 12.x or higher
-- [Gulp](https://gulpjs.com/) - globally 
-    - `npm install -g gulp-cli`
-- [Yarn](https://yarnpkg.com/) (optional) 
-
-<br />
-
-**Step #2** - Change the working directory to `assets` folder
-
-```bash
-$ cd apps/static/assets
-```
-
-<br />
-
-**Step #3** - Install modules (this will create a classic `node_modules` directory)
-
-```bash
-$ npm install
-// OR
-$ yarn
-```
-
-<br />
-
-**Step #4** - Edit & Recompile SCSS files 
-
-```bash
-$ gulp scss
-```
-
-The generated file is saved in `static/assets/css` directory.
-
-<br />
-
-## Browser Support
-
-At present, we officially aim to support the last two versions of the following browsers:
-
-<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
-
-<br />
-
-## Resources
-
-- Demo: <https://www.creative-tim.com/live/argon-dashboard-flask>
-- Download Page: <https://www.creative-tim.com/product/argon-dashboard-flask>
-- Documentation: <https://demos.creative-tim.com/argon-dashboard-flask/docs/1.0/getting-started/getting-started-flask.html>
-- License Agreement: <https://www.creative-tim.com/license>
-- Support: <https://www.creative-tim.com/contact-us>
-- Issues: [Github Issues Page](https://github.com/creativetimofficial/argon-dashboard-flask/issues)
-
-<br />
-
-## Reporting Issues
-
-We use GitHub Issues as the official bug tracker for the **Argon Dashboard Flask**. Here are some advices for our users that want to report an issue:
-
-1. Make sure that you are using the latest version of the **Argon Dashboard Flask**. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/).
-2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
-3. Some issues may be browser-specific, so specifying in what browser you encountered the issue might help.
-
-<br />
-
-## Technical Support or Questions
-
-If you have questions or need help integrating the product please [contact us](https://www.creative-tim.com/contact-us) instead of opening an issue.
-
-<br />
-
-## Licensing
 
 - Copyright 2019 - present [Creative Tim](https://www.creative-tim.com/)
 - Licensed under [Creative Tim EULA](https://www.creative-tim.com/license)
 
-<br />
-
-## Useful Links
-
-- [More products](https://www.creative-tim.com/bootstrap-themes) from Creative Tim
-- [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w)
-- [Freebies](https://www.creative-tim.com/bootstrap-themes/free) from Creative Tim
-- [Affiliate Program](https://www.creative-tim.com/affiliates/new) (earn money)
-
-<br />
-
-## Social Media
-
-- Twitter: <https://twitter.com/CreativeTim>
-- Facebook: <https://www.facebook.com/CreativeTim>
-- Dribbble: <https://dribbble.com/creativetim>
-- Instagram: <https://www.instagram.com/CreativeTimOfficial>
-
-<br />
-
----
-[Argon Dashboard Flask](https://www.creative-tim.com/product/argon-dashboard-flask) - Provided by [Creative Tim](https://www.creative-tim.com/) and [AppSeed](https://appseed.us)
