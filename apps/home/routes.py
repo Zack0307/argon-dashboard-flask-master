@@ -9,7 +9,7 @@ from flask_login import login_required
 from jinja2 import TemplateNotFound
 from malware_file_execute import *
 import torch
-import torch.nn as nn
+# import torch.nn as nn
 
 device =  torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -19,7 +19,6 @@ model.eval()
 @blueprint.route('/index')
 @login_required
 def index():
-
     return render_template('home/index.html', segment='index')
 
 @blueprint.route('/virus-upload', methods=['GET'])
