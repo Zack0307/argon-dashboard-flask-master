@@ -31,9 +31,9 @@ def virus_detect():
     #讀取檔案
     detect_file = read_file("接收要偵測的文件")
     #轉換markov
-    markov_file = file_to_hex(detect_file)
+    matrix = file_to_hex(detect_file)
     #markov轉換成npy
-    npy_file = markov_to_npy(markov_file)
+    npy_file = markov_to_npy(npy_path, matrix)
     #讀取npy檔
     datasets, cnt = load_markov_matrices2(npy_path)
 
