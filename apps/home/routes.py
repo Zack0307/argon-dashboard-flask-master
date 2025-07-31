@@ -14,9 +14,9 @@ import torch
 device =  torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 model = VGG(num_classes = 2)
-model.load_state_dict(torch.load('C:\Users\digital\Desktop\malware\malware_analysis1.pt', map_location = device))
+model.load_state_dict(torch.load('C:/Users/digital/Desktop/malware/malware_analysis1.pt', map_location = device))
 model.eval()
-npy_path = "C:\Users\digital\Desktop\malware\npy_output"
+npy_path = "C:/Users/digital/Desktop/malware/npy_output"
 @blueprint.route('/index')
 @login_required
 def index():
