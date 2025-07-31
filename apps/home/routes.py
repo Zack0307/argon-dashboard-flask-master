@@ -14,8 +14,9 @@ import torch
 device =  torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 model = VGG(num_classes = 2)
-model.load_state_dict(torch.load('C:/Users/digital/Desktop/malware/malware_analysis1.pt', map_location = device))
+model.load_state_dict(torch.load('C:\Users\digital\Desktop\malware\malware_analysis1.pt', map_location = device))
 model.eval()
+npy_path = "C:\Users\digital\Desktop\malware\npy_output"
 @blueprint.route('/index')
 @login_required
 def index():
@@ -28,11 +29,14 @@ def virus_upload():
 @blueprint.route('/virus-detect', methods=['POST'])
 def virus_detect():
     #讀取檔案
-    detect_file = read_file()
+    detect_file = read_file("接收要偵測的文件")
     #轉換markov
     markov_file = file_to_hex(detect_file)
     #markov轉換成npy
     npy_file = markov_to_npy(markov_file)
+    #讀取npy檔
+    datasets, cnt = load_markov_matrices2(npy_path)
+
 
     pass
 
